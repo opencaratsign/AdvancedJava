@@ -1,0 +1,11 @@
+
+public class AudioPlayer {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)  {
+		
+	}
+
+}

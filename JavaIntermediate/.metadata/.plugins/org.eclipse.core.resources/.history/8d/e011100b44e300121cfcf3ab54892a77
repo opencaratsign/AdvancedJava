@@ -1,0 +1,23 @@
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+
+@SuppressWarnings("serial")
+public class Store extends JFrame{
+	public Store() {
+		super("Store");
+		setSize(new Dimension(400,400));
+		setVisible(true);
+		initialize();
+		setLayout(new FlowLayout());
+		
+	}
+	
+	public void initialize() {
+		JButton button = new JButton("foo!");
+		add(button);
+	}
+}

@@ -1,0 +1,21 @@
+
+public class AudioPlayer {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)  {
+		Runtime r = Runtime.getRuntime();
+		Process p = null;
+		String cmd[] = {"ls"};
+
+		try {
+		    p = r.exec(cmd);
+		    p = r.exec("cd");
+		    System.out.println("testing");
+		} catch (Exception e) {
+		    e.printStackTrace();
+		}
+	}
+
+}
