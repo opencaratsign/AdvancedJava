@@ -1,0 +1,43 @@
+import java.util.Random;
+
+
+
+
+public class TicTacToePlayer {
+	TicTacToeGame game; 
+	
+	public TicTacToePlayer (TicTacToeGame g) {
+		game = g;
+	}
+	
+	public TicTacToeMove getMove() {
+		return getRandomMove();		
+	}
+	
+	public TicTacToeMove getFirstMoveFound() {
+		 for (int x = 0; x < 3; x++) {
+			for (int y = 0; y < 3; y++) {
+				if (game.canPlacePieceAt(x, y)) {
+					return new TicTacToeMove(game, x, y);
+				}
+				
+			}
+		}
+		 return null;
+		
+	}
+	public TicTacToeMove getRandomMove() {
+		Random r = new Random(); 
+		int i = r.nextInt(3);
+		int j = r.nextInt(3);
+		while (game.canPlacePieceAt(i, j)) {
+			
+				return new TicTacToeMove(game, i, j);
+			
+				
+		}
+		
+		return null;
+	}
+	
+}

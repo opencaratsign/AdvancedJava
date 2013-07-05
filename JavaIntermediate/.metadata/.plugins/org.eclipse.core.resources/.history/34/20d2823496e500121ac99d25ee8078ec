@@ -1,0 +1,25 @@
+
+
+
+public class TicTacToePlayer {
+	TicTacToeGame game; 
+	
+	public TicTacToePlayer (TicTacToeGame g) {
+		game = g;
+	}
+	
+	public TicTacToeMove getMove() {
+		printAllMoves();
+		return new TicTacToeMove(game, 0, 0);
+	}
+	
+	public void printAllMoves() {
+		for (int x = 0; x < 3; x++) {
+			for (int y = 0; y < 3; y++) {
+				if (game.canPlacePieceAt(x, y)) {
+					System.out.println("Can place a piece at " + x + ", " + y);
+				}
+			}
+		}
+	}
+}
